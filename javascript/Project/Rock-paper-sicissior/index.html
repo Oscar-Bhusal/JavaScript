@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors</title>
+
+  <style>
+    body{
+      background-color: rgb(195, 248, 229);
+      margin: 0;
+      font-family:sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container{
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(19, 8, 8, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 520px;
+      width: 650px;
+      gap: 40px;
+      /* background-color: rgb(252, 238, 220); */
+      background: linear-gradient(220deg, rgb(220, 243, 241), rgb(234, 238, 238));
+      margin: 5px ;
+    }
+
+    .topic{
+      margin: 0;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(105, 91, 13);
+      margin-top: 20px;
+    }
+
+    .description{
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(65, 65, 65);
+    }
+
+    .scores{
+      display: flex;
+      gap: 360px;
+    }
+
+    .player-score{
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(65, 65, 65);
+      width: 100px;
+    }
+
+    .computer-score{
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(65, 65, 65);
+      width: 120px;
+    }
+
+    .options{
+      display: flex;
+      gap: 50px;
+      margin: 0;
+    }
+
+    button{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(252, 249, 246);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover{
+      background-color: rgb(252, 228, 228);
+    }
+
+    button:active{
+      background-color: rgb(238, 94, 94);
+    }
+
+    .choosed-options{
+      display: flex;
+      flex-direction: row;
+      gap: 120px;
+      margin: 0;
+    }
+
+    .player-choosed-option-div,.computer-choosed-option-div{
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(83, 2, 2);
+      width: auto;
+      margin: 0;
+    }
+
+    .point-to-div{
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(138, 126, 18);
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topic">ROCK PAPER SCISSORS</div>
+    <div class="description">Choose between rock, paper and scissors. The computer will<br> also choose and the one who wins will get a point. Whoever<br> gets 3 points first becomes the winner.</div>
+    <div class="scores">
+      <div class="player-score">Player: <span id="player-score">0</span></div>
+      <div class="computer-score">Computer: <span id="computer-score">0</span></div>
+    </div>
+    <div class="options">
+      <div><button id="rock"><img src="https://cdn4.iconfinder.com/data/icons/line-awesome-vol-3/32/hand-rock-70.png"></button></div>
+      <div><button id="paper"><img src="https://cdn1.iconfinder.com/data/icons/line-awesome-vol-3/32/hand-paper-70.png"></button></div>
+      <div><button id="scissors"><img src="https://cdn3.iconfinder.com/data/icons/line-awesome-vol-3/32/hand-scissors-70.png"></button></div>
+    </div>
+    <div class="choosed-options">
+      <div class="player-choosed-option-div">You choosed: <span id="player-choosed-option">-----</span></div>
+      <div class="computer-choosed-option-div">Computer choosed: <span id="computer-choosed-option">-----</span></div>
+    </div>
+      <div class="point-to-div" id="point-to">----------------------------</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

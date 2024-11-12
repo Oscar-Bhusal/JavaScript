@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light and Dark Mode</title>
+
+  <style>
+
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      transition: .4s;
+    }
+
+    .input{
+      visibility: hidden;
+    }
+
+    .label{
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      background-color: lightgray;
+      border-radius: 20px;
+    }
+
+    .circle{
+      width: 34px;
+      background-color: rgb(255, 255, 255);
+      height: 34px;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      cursor: pointer;
+      animation: toggleOff .4s linear forwards;
+    }
+
+    .input:checked + .label{
+      background-color: rgb(255, 255, 255);
+    }
+
+    .input:checked + .label .circle{
+      animation: toggleOn 0.4s linear forwards;
+      background-color: black;
+    }
+
+    @keyframes toggleOn{
+      0%{
+        transform: translateX(0);
+      }
+      100%{
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes toggleOff{
+      0%{
+        transform: translateX(40px);
+      }
+      100%{
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" class="input" id="dark-mode">
+  <label for="dark-mode" class="label">
+    <div class="circle"></div>
+  </label>
+
+  <script src="script.js"></script>
+</body>
+</html>

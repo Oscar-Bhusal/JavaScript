@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Calender</title>
+
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: slateblue;
+      font-family: cursive;
+      flex-direction: column;
+    }
+
+    .calendar-container{
+      background-color: white;
+      width: 300px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .month-name{
+      margin: 0;
+      background-color: rgb(248, 85, 26);
+      color: white;
+      padding: 10px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .day-name{
+      font-size: 20px;
+      color: rgb(129, 128, 128);
+      margin: 20px 0 10px 0;
+    }
+
+    .day-number{
+      font-size: 80px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .year{
+      margin: 15px 0 20px 0;
+      font-size: 20px;
+      color: rgb(129, 128, 128);
+      font-weight: 500;
+    }
+
+    .time-container{
+      background-color: white;
+      width: 300px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .time{
+      margin: 0;
+      background-color: rgb(255, 135, 23);
+      color: white;
+      padding: 10px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar-container">
+    <p class="month-name" id="month-name">April</p>
+    <p class="day-name" id="day-name">Friday</p>
+    <p class="day-number" id="day-number">20</p>
+    <p class="year" id="year">2024</p>
+  </div>
+
+  <div class="time-container">
+    <p class="time" id="time">0:00:00 PM</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

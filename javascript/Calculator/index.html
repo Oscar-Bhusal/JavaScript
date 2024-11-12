@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: rgb(196, 225, 226);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calculator{
+      width: 300px;
+      height: 390px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
+    }
+
+    .display{
+      margin-top: 10px;
+    }
+
+    #screen{
+      width: 260px;
+      height: 80px;
+      font-family:Arial, Helvetica, sans-serif;
+      background-color: rgb(179, 175, 175);
+      border: 1px solid rgb(0, 0, 0);
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .keys{
+      padding: 10px 5px;
+      width: 100%;
+      margin-left: -5px;
+    }
+
+    .row-1,.row-2,.row-3,.row-4{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .row-1{
+      margin-top: 5px;
+    }
+
+    button{
+      padding: 15px 18px;
+      background-color: rgb(236, 236, 170);
+      border: 1px solid rgb(51, 51, 37);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    #clear-btn{
+      background-color: rgb(245, 151, 64);
+      padding: 15px 10px;
+    }
+
+    #equal-btn{
+      background-color: rgb(107, 226, 107);
+    }
+    
+    button:hover{
+      opacity: 0.7;
+    }
+
+    button:active{
+      background-color: rgb(240, 248, 125);
+    }
+
+    #clear-btn:active{
+      background-color: rgb(243, 130, 24);
+    }
+
+    #equal-btn:active{
+      background-color: rgb(64, 231, 64);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div id="screen">
+    </div>
+    <div class="keys">
+      <div class="row-1">
+        <button id="7-btn">7</button>
+        <button id="8-btn">8</button>
+        <button id="9-btn">9</button>
+        <button id="clear-btn">AC</button>
+      </div>
+      <div class="row-2">
+        <button id="4-btn">4</button>
+        <button id="5-btn">5</button>
+        <button id="6-btn">6</button>
+        <button id="division-btn">÷</button>
+      </div>
+      <div class="row-3">
+        <button id="1-btn">1</button>
+        <button id="2-btn">2</button>
+        <button id="3-btn">3</button>
+        <button id="multiplication-btn">×</button>
+      </div>
+      <div class="row-4">
+        <button id="0-btn">0</button>
+        <button id="add-btn">+</button>
+        <button id="minus-btn">-</button>
+        <button id="equal-btn">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

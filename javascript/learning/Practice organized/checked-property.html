@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checekd-Property</title>
+
+  <style>
+    body{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.5em;
+    }
+
+    #mySubmit{
+      font-size: 1em;
+      border-radius: 5px;
+      padding: 10px 15px;
+    }
+
+    button{
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="myCheckBox">
+  <label for="myCheckBox">Subscribe</label><br><br>
+
+  <input type="radio" id="visaBtn" name="card">
+  <label for="visaBtn">Visa</label><br>
+  <input type="radio" id="masterCardBtn" name="card">
+  <label for="masterCardBtn">MasterCard</label><br>
+  <input type="radio" id="payPalBtn" name="card">
+  <label for="payPalBtn">Paypal</label><br><br>
+
+  <button type="submit" id="mySubmit">Submit</button>
+
+  <p id="subResult"></p>
+  <p id="paymentResult"></p>
+
+  <script src="checked-property.js"></script>
+</body>
+</html>
